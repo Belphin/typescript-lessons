@@ -3,11 +3,10 @@ export interface UserState {
 	loading: boolean;
 	error: null | string;
 }
-
 export enum UserActionTypes {
 	FETCH_USERS = "FETCH_USERS",
 	FETCH_USERS_SUCCESS = "FETCH_USERS_SUCCESS",
-	FETCH_USERS_ERROR = "FETCH_USERS_ERROR",
+	FETCH_USERS_ERROR = "FETCH_USERS_FETCH_USERS_ERROR",
 }
 interface FetchUsersAction {
 	type: UserActionTypes.FETCH_USERS;
@@ -22,5 +21,5 @@ interface FetchUsersErrorAction {
 }
 export type UserAction =
 	| FetchUsersAction
-	| FetchUsersSuccessAction
-	| FetchUsersErrorAction;
+	| FetchUsersErrorAction
+	| FetchUsersSuccessAction;
